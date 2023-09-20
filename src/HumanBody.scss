@@ -1,0 +1,18 @@
+/* MuscularSystem.scss */
+
+.muscular-system {
+    width: 800px;
+    height: 800px;
+    /* Ajoutez d'autres styles SVG ici */
+  }
+  
+// cursor hover on muscular system
+
+
+.muscular-system path {
+    cursor: pointer;
+    &:hover {
+        fill: rgba(0, 0, 255, 0.5);
+    }
+  }
+  

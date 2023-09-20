@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import HumanBody from './HumanBody';
+import ExerciseList from './ExerciseList';
 
 function App() {
+  const [selectedMuscleGroup, setSelectedMuscleGroup] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Fitness App</h1>
+      <HumanBody setSelectedMuscleGroup={setSelectedMuscleGroup} />
+      <ExerciseList selectedMuscleGroup={selectedMuscleGroup} />
     </div>
   );
 }
